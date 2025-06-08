@@ -15,9 +15,9 @@ pnpm-debug.log*
 
 # Editor directories and files
 .idea
-.vscode
+.vscode 
 *.suo
-*.ntvs*
+*.ntvs* 
 *.njsproj
 *.sln
 *.sw?
