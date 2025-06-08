@@ -1,14 +1,15 @@
 <template>
-  <div class="p-6 text-center text-2xl text-red-600 font-semibold bg-red-500">
-    Tailwind is working! ✅
+  <div class="flex items-center justify-center h-screen " >
+    <div class="p-6 text-center  text-7xl text-black font-semibold bg-red-500 rounded-4xl ">
+    Happy coding & good luck to you!
+  </div>
   </div>
   
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import'./assets/tailwind.css'
-
+import "../main.css"
 export default {
   name: 'App',
   components: {
