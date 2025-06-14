@@ -4,30 +4,23 @@
         Happy coding & good luck to you!
     </div>
 </div> -->
-<Signup/>
+
+<router-link to="/"></router-link>
+<router-link to="/Login"></router-link>
+<router-view></router-view>
+
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import "../main.css"
-import Signup from './components/Signup.vue';
 export default {
     name: 'App',
     components: {
         // HelloWorld
-        Signup
-    }
+       
+    },
+    
 }
 </script>
 
-<!-- 
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-</style> -->

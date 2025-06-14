@@ -3,7 +3,7 @@
   <div class="min-h-screen flex items-center justify-center bg-white-100 box-border">
     <div class="flex w-full max-w-6xl bg-white shadow-lg overflow-hidden rounded-lg">
         <!-- Left Image Side -->
-        <div class="w-1/2 overflow-hidden hidden md:block">
+        <div class="w-1/2 overflow-hidden hidden md:block flex-col">
             <img src="/Signup.png" alt="Signup Visual" class="object-cover p-24 scale-150" />
         </div>
 
@@ -11,7 +11,7 @@
         <div class="w-full md:w-1/2 p-10">
             <h1 class="text-3xl font-bold mb-4 mx-4 text-left">FASCO</h1>
             <br/>
-            <h2 class="text-xl font-semibold mb-6 mx-4  text-left">Create Account</h2>
+            <h2 class="text-xl font-semibold mb-6 mx-4 text-left">Create Account</h2>
 
             <!-- Social Signup Buttons -->
             <div class="flex justify-center space-x-20 mb-6 mr-6">
@@ -67,7 +67,7 @@
 
             <p class="text-center text-sm mt-4">
                 Already have an account?
-                <a href="#" class="text-blue-500 hover:underline">Login</a>
+                <a href="/Login" class="text-blue-500 hover:underline">Login</a>
             </p>
 
             <br/><br/>
