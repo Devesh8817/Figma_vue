@@ -1,64 +1,50 @@
 <template>
-<div class="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-    <div class="bg-white shadow-md rounded-lg flex overflow-hidden w-full max-w-5xl">
-        <!-- Left Side Image -->
-        <div class="w-1/2 hidden md:block flex-col">
-            <img src="../../public/Signin.png" alt="Fashion" class="object-cover w-full h-full" />
+<div class="flex h-screen">
+    <!-- Left Image Section -->
+    <div class="w-1/2 hidden overflow-hidden md:block relative flex-col ">
+        <img src="../../public/Signup.jpg" alt="Login visual" class=" object-cover items-center w-[860px] h-[1024px]" />
+        <!-- Logo on image -->
+        <div class="absolute top-6 left-6 flex items-center space-x-2">
+            <h1 class="text-black text-2xl font-bold px-8 py-8">Krist</h1>
         </div>
+    </div>
 
-        <!-- Right Side Form -->
-        <div class="w-full md:w-1/2 p-12">
-            <h1 class="text-3xl font-bold ml-1 text-gray-800 mb-2">FASCO</h1>
-            <p class="text-lg text-gray-600 ml-1 mb-6">Sign In To FASCO</p>
+    <!-- Right Login Form -->
+    <div class="w-full md:w-1/2 flex items-center justify-center px-4">
+        <div class="max-w-md w-full space-y-8">
 
-            <!-- Social Buttons -->
-            <div class="flex gap-12 ml-1 mb-6">
-                <button class="flex items-center gap-1.5 border px-2 py-2 rounded border-blue-400 hover:bg-gray-100 transition text-sm">
-                    <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5" />
-                    Sign up with Google
-                </button>
-                <button class="flex items-center gap-1.5 border px-2 py-2 rounded border-blue-400 hover:bg-gray-100 transition text-sm">
-                    <img src="https://www.svgrepo.com/show/303161/gmail-icon-logo.svg" alt="Email" class="w-5 h-5" />
-                    Sign up with Email
-                </button>
+            <!-- Welcome Message -->
+            <div>
+                <h2 class="mt-6 text-2xl font-bold text-gray-900">
+                    Welcome 👋
+                </h2>
+                <p class="mt-2 text-sm text-gray-500">Please login here</p>
             </div>
 
-           <div class="text-center text-gray-500 mt-10 mb-3 mr-3">— OR —</div>
+            <!-- Form -->
+            <form class="mt-8 space-y-6">
+                <div class="rounded-md shadow-sm space-y-4">
+                    <label for="email" class="block text-xs font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 border border-black-900 rounded-lg focus:outline-none ring ring-black-500" />
 
-            <!-- Form Inputs -->
-            <form>
-                <div class="mb-4">
-                    <input type="email" placeholder="Email" class="w-95 border-b border-gray-400 focus:outline-none focus:border-black py-2" />
+                    <label for="password" class="block text-xs font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" class="w-full px-4 py-2 border border-black-900 rounded-md focus:outline-none ring ring-black-500" /> </div>
+
+                <div class="flex items-center justify-between text-sm">
+                    <label class="flex items-center space-x-2 text-black font-medium">
+                        <input type="checkbox" class="form-checkbox " />
+                        <span>Remember Me</span>
+                    </label>
+                    <a href="#" class="text-black font-medium hover:underline">Forgot Password?</a>
                 </div>
-                <div class="mb-6">
-                    <input type="password" placeholder="Password" class="w-95 border-b border-gray-400 focus:outline-none focus:border-black py-2" />
+
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg bg-black text-white hover:bg-gray-800 cursor-pointer">
+                        Log in
+                    </button>
                 </div>
-
-                <!-- Buttons -->
-                <button type="submit" class="w-90 ml-4 bg-black text-white py-2 rounded-lg cursor-pointer shadow hover:opacity-85 transition">
-                    Sign in
-                </button>
-
-                <button type="button" class="w-90 ml-4 border mt-3 text-blue-500 border-blue-600 py-2 rounded-lg hover:bg-blue-100 cursor-pointer transition">
-                    Register Now
-                </button>
             </form>
-
-            <!-- Footer -->
-            <div class="text-sm text-right pr-10 mt-3 text-blue-600">
-                <a href="#" class="hover:underline">Forgot Password?</a>
-            </div>
-            <div class="text-right text-sm mt-20 text-black-900">
-                <span>FASCO Terms & Conditions</span>
-            </div>
         </div>
     </div>
 </div>
 </template>
-
-<script>
-export default {
-    name: 'Login',
-
-}
-</script>
