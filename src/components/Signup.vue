@@ -1,85 +1,63 @@
 <template>
-<div class="">
-  <div class="min-h-screen flex items-center justify-center bg-white-100 box-border">
-    <div class="flex w-full max-w-6xl bg-white shadow-lg overflow-hidden rounded-lg">
-        <!-- Left Image Side -->
-        <div class="w-1/2 overflow-hidden hidden md:block flex-col">
-            <img src="/Signup.png" alt="Signup Visual" class="object-cover p-24 scale-150" />
+<div class="flex h-screen">
+    <!-- Left Image Section -->
+    <div class="w-1/2 hidden overflow-hidden md:block relative flex-col ">
+        <img src="../../public/Signup.jpg" alt="Signup" class=" object-cover items-center w-[860px] h-[1024px]" />
+        <!-- Logo on image -->
+        <div class="absolute top-6 left-6 flex items-center space-x-2">
+            <h1 class="text-black text-2xl font-bold px-8 py-8">Krist</h1>
         </div>
+    </div>
 
-        <!-- Right Form Side -->
-        <div class="w-full md:w-1/2 p-10">
-            <h1 class="text-3xl font-bold mb-4 mx-4 text-left">FASCO</h1>
-            <br/>
-            <h2 class="text-xl font-semibold mb-6 mx-4 text-left">Create Account</h2>
+    <!-- Right Login Form -->
+    <div class="w-full md:w-1/2 flex items-center justify-center px-4">
+        <div class="max-w-md w-full space-y-8">
 
-            <!-- Social Signup Buttons -->
-            <div class="flex justify-center space-x-20 mb-6 mr-6">
-                <button class="flex items-center px-4 py-2 border rounded text-sm">
-                    <img src="https://www.svgrepo.com/show/355037/google.svg" class="h-5 mr-2" />
-                    Sign up with Google
-                </button>
-                <button class="flex items-center px-4 py-2 border rounded text-sm">
-                    <img src="https://www.svgrepo.com/show/303161/gmail-icon-logo.svg" class="h-5 mr-2" />
-                    Sign up with Email
-                </button>
+            <!-- Welcome Message -->
+            <div>
+                <h2 class="mt-6 text-2xl font-bold text-gray-900">
+                    Create New Account
+                </h2>
+                <p class="mt-2 text-sm text-gray-500">Please enter details</p>
             </div>
 
-            <div class="text-center text-gray-500 mb-3 mr-3">— OR —</div>
+            <!-- Form -->
+            <form class="mt-8 space-y-6">
+                <div class="rounded-md shadow-sm space-y-4">
+                    <label for="First Name" class="block text-xs font-medium text-gray-700 mb-1">First Name</label>
+                    <input type="F_name" id="F_name" name="F_name" placeholder="Enter your First Name" class="w-full px-4 py-2 border border-black-900 rounded-lg focus:outline-none ring ring-black-500" />
 
-            <!-- Form Fields -->
-            <form class="space-y-1 ">
-                <div class="flex space-x-4">
-                    <div>
-                      <input type="text" placeholder="First Name" class="  px-4 py-2 rounded" />
-                      <div class="w-full h-[0.5px] bg-gray-400 my-4 ml-4"></div>
-                    </div>
-                    <div class="ml-5">
-                      <input type="text" placeholder="Last Name" class="  px-4 py-2 rounded" />
-                      <div class="w-full h-[0.5px] bg-gray-400 my-4 ml-4"></div>
-                    </div>
-                </div>
-                <div class="flex space-x-4">
-                  <div>
-                    <input type="email" placeholder="Email Address" class=" px-4 py-2 rounded" />
-                    <div class="w-full h-[0.5px] bg-gray-400 my-4 ml-4"></div>
-                  </div>
-                  <div class="ml-5">
-                    <input type="tel" placeholder="Contact" class="  px-4 py-2 rounded" />
-                    <div class="w-full h-[0.5px] bg-gray-400 my-4 ml-4"></div>
-                  </div>
-                </div>
-                <div class="flex space-x-4">
-                  <div>
-                    <input type="password" placeholder="Password" class=" px-4 py-2 rounded" />
-                    <div class="w-full h-[0.5px] bg-gray-400 my-4 ml-4"></div>
-                  </div>
-                  <div class="ml-5">
-                    <input type="password" placeholder="Confirm Password" class="  px-4 py-2 rounded" />
-                    <div class="w-full h-[0.5px] bg-gray-400 my-4 ml-4"></div>
-                  </div>
+                    <label for="Last Name" class="block text-xs font-medium text-gray-700 mb-1">Last Name</label>
+                    <input type="L_name" id="L_name" name="L_name" placeholder="Enter your Last Name" class="w-full px-4 py-2 border border-black-900 rounded-lg focus:outline-none ring ring-black-500" />
+
+                    <label for="email" class="block text-xs font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 border border-black-900 rounded-lg focus:outline-none ring ring-black-500" />
+
+                    <label for="password" class="block text-xs font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" class="w-full px-4 py-2 border border-black-900 rounded-md focus:outline-none ring ring-black-500" /> </div>
+
+                <div class="flex items-center justify-between text-sm">
+                    <label class="flex items-center space-x-2 text-black font-medium">
+                        <input type="checkbox" class="form-checkbox " />
+                        <span>I agree to the <b>Terms & Conditions</b> </span>
+                    </label>
                 </div>
 
-                <button type="submit" class="w-full  bg-black text-white py-2 rounded shadow hover:bg-gray-800">
-                    Create Account
-                </button>
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg bg-black text-white hover:bg-gray-800 cursor-pointer">
+                        Signup
+                    </button>
+                </div>
+
+                <div class="mt-6 text-center text-sm text-gray-600">
+                    Already have an account? Please
+                    <a href="/Login" class="font-semibold text-blue-600 hover:text-blue-800">
+                        Login
+                    </a>
+                </div>
             </form>
 
-            <p class="text-center text-sm mt-4">
-                Already have an account?
-                <a href="/Login" class="text-blue-500 hover:underline">Login</a>
-            </p>
-
-            <br/><br/>
-            <p class="text-xs text-gray-800 text-right mt-4">FASCO Terms & Conditions</p>
         </div>
     </div>
 </div>
-</div>
 </template>
-
-<script>
-export default {
-    name: 'Signup',
-}
-</script>

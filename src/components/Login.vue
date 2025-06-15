@@ -2,7 +2,7 @@
 <div class="flex h-screen">
     <!-- Left Image Section -->
     <div class="w-1/2 hidden overflow-hidden md:block relative flex-col ">
-        <img src="../../public/Signup.jpg" alt="Login visual" class=" object-cover items-center w-[860px] h-[1024px]" />
+        <img src="../../public/Login.jpg" alt="Login" class=" object-cover items-center w-[860px] h-[1024px]" />
         <!-- Logo on image -->
         <div class="absolute top-6 left-6 flex items-center space-x-2">
             <h1 class="text-black text-2xl font-bold px-8 py-8">Krist</h1>
@@ -42,6 +42,13 @@
                     <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg bg-black text-white hover:bg-gray-800 cursor-pointer">
                         Log in
                     </button>
+                </div>
+
+                <div class="mt-6 text-center text-sm text-gray-600">
+                    Don't have any Account? Click on
+                    <a href="/" class="font-semibold text-blue-600 hover:text-blue-800">
+                        Signup
+                    </a>
                 </div>
             </form>
         </div>
