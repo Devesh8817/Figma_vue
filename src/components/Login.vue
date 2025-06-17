@@ -35,7 +35,7 @@
                         <input type="checkbox" class="form-checkbox " />
                         <span>Remember Me</span>
                     </label>
-                    <a href="#" class="text-black font-medium hover:underline">Forgot Password?</a>
+                    <a href="/ForgotPassword" class="text-black font-medium hover:underline">Forgot Password?</a>
                 </div>
 
                 <div>

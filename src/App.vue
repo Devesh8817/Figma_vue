@@ -7,6 +7,7 @@
 
 <router-link to="/"></router-link>
 <router-link to="/Login"></router-link>
+<router-link to="/ForgotPassword"></router-link>
 <router-view></router-view>
 
 </template>
