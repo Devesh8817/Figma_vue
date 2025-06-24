@@ -35,7 +35,7 @@
           <input type="text" maxlength="1" class="w-12 h-12 border border-gray-300 rounded-md text-center text-xl focus:outline-none focus:ring-2 focus:ring-black" />
         </div>
 
-        <button class="w-full cursor-pointer py-3 bg-black text-white rounded-md hover:bg-gray-800 transition duration-300">
+        <button class="w-full cursor-pointer py-3 bg-black text-white rounded-md hover:bg-gray-800 transition duration-300" @click="ChnagePassword"> 
           Verify
         </button>
       </div>
@@ -49,6 +49,9 @@ export default {
     methods:{
         backButton(){
             this.$router.push('/ForgotPassword');
+        },
+        ChnagePassword(){
+          this.$router.push('/Pass_change_page')
         }
     }
 }

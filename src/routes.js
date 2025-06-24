@@ -3,6 +3,7 @@ import Signup from './components/Signup.vue';
 import Login from './components/Login.vue';
 import ForgotPassword from './components/ForgotPassword.vue';
 import OtpPage from './components/OtpPage.vue';
+import Pass_change_page from './components/Pass_change_page.vue'
 const routes = [
     {
         name:Signup,
@@ -23,6 +24,11 @@ const routes = [
         name:OtpPage,
         path: '/OtpPage',
         component: OtpPage
+    },
+    {
+        name:Pass_change_page,
+        path:'/Pass_change_page',
+        component: Pass_change_page
     }
 ];
 const router = createRouter({

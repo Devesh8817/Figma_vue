@@ -31,7 +31,7 @@
             </label>
 
             <!-- Send OTP Button -->
-            <button class="w-full cursor-pointer bg-black text-white py-2 rounded-md hover:bg-gray-800 transition">
+            <button class="w-full cursor-pointer bg-black text-white py-2 rounded-md hover:bg-gray-800 transition" @click="sendOTP">
                 Send OTP
             </button>
         </div>
@@ -50,6 +50,9 @@ export default {
     methods: {
         backbutton() {
             this.$router.push('/Login');
+        },
+        sendOTP() {
+            this.$router.push('/OtpPage')
         }
     }
 };
