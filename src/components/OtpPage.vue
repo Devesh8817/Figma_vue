@@ -1,7 +1,7 @@
 <template>
-  <div class="flex min-h-screen">
+  <div class="flex min-h-screen flex-col sm:flex-row">
     <!-- Left Image -->
-    <div class="w-1/2 h-screen">
+    <div class="w-1/2 h-screen ">
       <img
         src="../../public/OtpPage.jpg"
         alt="OTP Visual"
@@ -10,7 +10,7 @@
     </div>
 
     <!-- Right Form -->
-    <div class="w-1/2 flex items-center justify-center bg-white px-10">
+    <div class="w-1/2 flex items-center justify-center bg-white px-10 ">
       <div class="max-w-md w-full">
         <button @click="backButton" class="flex cursor-pointer items-center text-gray-500 mb-4 hover:text-black">
           <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">

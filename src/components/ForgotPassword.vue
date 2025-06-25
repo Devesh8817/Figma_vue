@@ -1,5 +1,5 @@
 <template>
-<div class="min-h-screen flex grid-cols-1 md:grid-cols-2">
+<div class="min-h-screen flex grid-cols-1 md:grid-cols-2 flex-col md:flex-row">
     <!-- Left Image Section -->
     <div class="hidden md:block w-[670px] h-[1024px] object-cover ">
         <div class="w-[680px] h-[1024px] overflow-hidden">
