@@ -10,6 +10,7 @@
 <router-link to="/ForgotPassword"></router-link>
 <router-link to="/OtpPage"></router-link>
 <router-link to="/Pass_change_page"></router-link>
+<router-link to="/Home"></router-link>
 <router-view></router-view>
 
 </template>
