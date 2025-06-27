@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
         <!-- Logo -->
         <div class="text-2xl font-bold text-gray-900 flex items-center gap-1">
-            <span>Krist</span>
+            <span><a href="/Home">Krist</a></span>
         </div>
 
         <!-- Desktop Nav Links -->
@@ -17,7 +17,7 @@
                     </svg>
                 </button>
                 <!-- Dropdown -->
-                <div class="absolute hidden group-hover:block mt-2 bg-white shadow-md rounded-md py-2 w-32 z-20">
+                <div class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-md opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-300 z-10">
                     <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Men</a>
                     <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Women</a>
                     <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Kids</a>
@@ -176,49 +176,134 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div
-        v-for="(testimonial, index) in testimonials"
-        :key="index"
-        class="bg-white shadow-lg rounded-xl p-6"
-      >
-        <!-- Stars -->
-        <div class="flex mb-3">
-          <template v-for="n in 5" :key="n">
-            <svg
-              class="w-5 h-5 text-yellow-400"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.719c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"
-              />
-            </svg>
-          </template>
-        </div>
+        <div v-for="(testimonial, index) in testimonials" :key="index" class="bg-white shadow-lg rounded-xl p-6">
+            <!-- Stars -->
+            <div class="flex mb-3">
+                <template v-for="n in 5" :key="n">
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.719c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z" />
+                    </svg>
+                </template>
+            </div>
 
-        <!-- Review Text -->
-        <p class="text-sm text-gray-600 mb-4">
-          It is a long established fact that a reader will be distracted by the readable
-          content of a page when looking at its layout. The point of using Lorem Ipsum.
-        </p>
+            <!-- Review Text -->
+            <p class="text-sm text-gray-600 mb-4">
+                It is a long established fact that a reader will be distracted by the readable
+                content of a page when looking at its layout. The point of using Lorem Ipsum.
+            </p>
 
-        <!-- User Info -->
-        <div class="flex items-center gap-3 mt-4">
-          <img
-            :src="testimonial.image"
-            alt="avatar"
-            class="w-10 h-10 rounded-full object-cover"
-          />
-          <div>
-            <p class="text-sm font-semibold text-gray-900">{{ testimonial.name }}</p>
-            <p class="text-xs text-gray-400">{{ testimonial.role }}</p>
-          </div>
+            <!-- User Info -->
+            <div class="flex items-center gap-3 mt-4">
+                <img :src="testimonial.image" alt="avatar" class="w-10 h-10 rounded-full object-cover" />
+                <div>
+                    <p class="text-sm font-semibold text-gray-900">{{ testimonial.name }}</p>
+                    <p class="text-xs text-gray-400">{{ testimonial.role }}</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
 </section>
 
+<section class="px-4 md:px-20 py-16 mt-16 bg-white">
+    <h2 class="text-2xl font-semibold text-center text-gray-900 mb-10">Our Instagram Stories</h2>
+
+    <!-- Images Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-10 mb-10">
+        <div v-for="(story, index) in stories" :key="index" class="relative group overflow-hidden rounded-md">
+            <!-- Image -->
+            <a :href="story.link" target="_blank" rel="noopener noreferrer">
+                <img :src="story.image" :alt="story.name" class=" w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105" />
+
+                <!-- Hover Instagram Icon -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="w-8 h-8" />
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Info Boxes -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-16 text-justify py-4 px-4">
+        <div v-for="(item, i) in info" :key="i">
+            <div class="mb-2 text-2xl">{{ item.icon }}</div>
+            <h4 class="font-semibold text-gray-900">{{ item.title }}</h4>
+            <p class="text-sm text-gray-500">{{ item.desc }}</p>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-[#0f0d1d] text-white py-10 px-6 md:px-25">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <!-- Brand & Contact Info -->
+        <div>
+            <h1 class="font-bold text-5xl mb-8">Krist</h1>
+            <ul class="space-y-3 text-sm">
+                <li class="flex items-center gap-2">
+                    📞 (704) 555-0127
+                </li>
+                <li class="flex items-center gap-2">
+                    ✉️ krist@example.com
+                </li>
+                <li class="flex items-center gap-2">
+                    📍 3891 Ranchview Dr. Richardson,<br />California 62639
+                </li>
+            </ul>
+        </div>
+
+        <!-- Information -->
+        <div>
+            <h2 class="font-bold mb-6">Information</h2>
+            <ul class="space-y-3 text-sm">
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">My Wishlist</a></li>
+                <li><a href="#">Checkout</a></li>
+            </ul>
+        </div>
+
+        <!-- Service -->
+        <div>
+            <h2 class="font-bold mb-6">Service</h2>
+            <ul class="space-y-3 text-sm">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Delivery Information</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <!-- Subscribe -->
+        <div>
+            <h2 class="font-bold mb-6">Subscribe</h2>
+            <p class="text-sm mb-4">Enter your email below to be the first to know about new collections and product launches.</p>
+            <div class="flex items-center border border-white rounded- px-3 py-2">
+                <span class="text-xl mr-2">✉️</span>
+                <input type="email" placeholder="Your Email" class="bg-transparent focus:outline-none text-white w-full" />
+                <button class="ml-2 text-white text-xl">➜</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-white/20 mt-10 pt-2 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div class="flex items-center gap-3">
+            <img src="https://img.icons8.com/color/48/visa.png" class="h-9" />
+            <img src="https://img.icons8.com/color/48/mastercard-logo.png" class="h-9" />
+            <img src="https://img.icons8.com/color/48/google-pay.png" class="h-9" />
+            <img src="https://img.icons8.com/color/48/amex.png" class="h-9" />
+            <img src="https://img.icons8.com/color/48/paypal.png" class="h-9" />
+        </div>
+        <p>©2023 Krist All Rights are reserved</p>
+        <div class="flex gap-4 text-white text-xl">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
 </template>
 
 <script>
@@ -326,23 +411,68 @@ export default {
             ],
 
             // new method 
-            testimonials: [
-        {
-          name: "Leslie Alexander",
-          role: "Model",
-          image: "https://randomuser.me/api/portraits/women/44.jpg",
-        },
-        {
-          name: "Jacob Jones",
-          role: "Co-Founder",
-          image: "https://randomuser.me/api/portraits/men/32.jpg",
-        },
-        {
-          name: "Jenny Wilson",
-          role: "Fashion Designer",
-          image: "https://randomuser.me/api/portraits/women/68.jpg",
-        },
-      ],
+            testimonials: [{
+                    name: "Leslie Alexander",
+                    role: "Model",
+                    image: "https://randomuser.me/api/portraits/women/44.jpg",
+                },
+                {
+                    name: "Jacob Jones",
+                    role: "Co-Founder",
+                    image: "https://randomuser.me/api/portraits/men/32.jpg",
+                },
+                {
+                    name: "Jenny Wilson",
+                    role: "Fashion Designer",
+                    image: "https://randomuser.me/api/portraits/women/68.jpg",
+                },
+            ],
+
+            //   new method 
+            stories: [{
+                    name: "Fashion Model 1",
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFjvldc9TFkqC7FxrAJxQzOnzAiwfTNXoXgw&s",
+                    link: "#",
+                },
+                {
+                    name: "Fashion Model 2",
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcyEFYkqsXdCb-P4PgYzkRmtmiMiisPaWeuQ&s",
+                    link: "#",
+                },
+                {
+                    name: "Fashion Model 3",
+                    image: "https://blackberrys.com/cdn/shop/articles/Screenshot_2023-10-27_at_6.28.02_PM.png?v=1737526748&width=2048",
+                    link: "#",
+                },
+                {
+                    name: "Fashion Model 4",
+                    image: "https://photosmint.com/wp-content/uploads/insta-boys-dp.webp",
+                    link: "#",
+                },
+            ],
+
+            //   new method 
+            info: [{
+                    icon: "📦",
+                    title: "Free Shipping",
+                    desc: "Free shipping for order above $150",
+                },
+                {
+                    icon: "💰",
+                    title: "Money Guarantee",
+                    desc: "Within 30 days for an exchange",
+                },
+                {
+                    icon: "🎧",
+                    title: "Online Support",
+                    desc: "24 hours a day, 7 days a week",
+                },
+                {
+                    icon: "💳",
+                    title: "Flexible Payment",
+                    desc: "Pay with multiple credit cards",
+                },
+            ],
 
         };
     },
