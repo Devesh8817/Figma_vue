@@ -7,26 +7,97 @@
         </div>
 
         <!-- Desktop Nav Links -->
-        <nav class="hidden md:flex ml-4 space-x-6 text-gray-700 text-sm font-medium">
-            <a href="#" class="hover:text-black">Home</a>
-            <div class="relative group">
-                <button class="hover:text-black flex items-center gap-1">
-                    Shop
-                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M5.5 7l4.5 4.5L14.5 7h-9z" />
-                    </svg>
-                </button>
-                <!-- Dropdown -->
-                <div class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-md opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-300 z-10">
-                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Men</a>
-                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Women</a>
-                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Kids</a>
-                </div>
-            </div>
-            <a href="#" class="hover:text-black">Our Story</a>
-            <a href="#" class="hover:text-black">Blog</a>
-            <a href="#" class="hover:text-black">Contact Us</a>
-        </nav>
+  <nav class=" px-6 py-4 ">
+    <ul class="flex justify-center space-x-8 font-medium relative">
+      <li><a href="#" class="hover:text-gray-600">Home</a></li>
+
+      <!-- Shop with Mega Menu -->
+      <li class="relative group">
+        <button class="flex items-center gap-1 hover:text-gray-600">
+          Shop
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Mega Menu -->
+        <div
+          class="absolute top-[40px] mr-30 mt-4 w-[60vw] max-w-5xl bg-white shadow-lg  rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-50 p-6 grid grid-cols-4 gap-8"
+        >
+          <!-- Column 1 -->
+          <div>
+            <h3 class="font-bold mb-2">Men</h3>
+            <ul class="space-y-1 text-sm">
+              <li><a href="#">T-Shirts</a></li>
+              <li><a href="#">Casual Shirts</a></li>
+              <li><a href="#">Formal Shirts</a></li>
+              <li><a href="#">Jackets</a></li>
+              <li><a href="#">Blazers & Coats</a></li>
+            </ul>
+            <h4 class="font-bold mt-4 mb-2">Indian & Festive Wear</h4>
+            <ul class="space-y-1 text-sm">
+              <li><a href="#">Kurtas & Kurta Sets</a></li>
+              <li><a href="#">Sherwanis</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <h3 class="font-bold mb-2">Women</h3>
+            <ul class="space-y-1 text-sm">
+              <li><a href="#">Kurtas & Suits</a></li>
+              <li><a href="#">Sarees</a></li>
+              <li><a href="#">Ethnic Wear</a></li>
+              <li><a href="#">Lehenga Cholis</a></li>
+              <li><a href="#">Jackets</a></li>
+            </ul>
+            <h4 class="font-bold mt-4 mb-2">Western Wear</h4>
+            <ul class="space-y-1 text-sm">
+              <li><a href="#">Dresses</a></li>
+              <li><a href="#">Jumpsuits</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <h3 class="font-bold mb-2">Footwear</h3>
+            <ul class="space-y-1 text-sm">
+              <li><a href="#">Flats</a></li>
+              <li><a href="#">Casual Shoes</a></li>
+              <li><a href="#">Heels</a></li>
+              <li><a href="#">Boots</a></li>
+              <li><a href="#">Sports Shoes & Floaters</a></li>
+            </ul>
+            <h4 class="font-bold mt-4 mb-2">Product Features</h4>
+            <ul class="space-y-1 text-sm">
+              <li><a href="#">360 Product Viewer</a></li>
+              <li><a href="#">Product with Video</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4 -->
+          <div>
+            <h3 class="font-bold mb-2">Kids</h3>
+            <ul class="space-y-1 text-sm">
+              <li><a href="#">T-Shirts</a></li>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jeans</a></li>
+              <li><a href="#">Trousers</a></li>
+              <li><a href="#">Party Wear</a></li>
+              <li><a href="#">Innerwear & Thermal</a></li>
+              <li><a href="#">Track Pants</a></li>
+              <li><a href="#">Value Pack</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="#" class="hover:text-gray-600">Our Story</a></li>
+      <li><a href="#" class="hover:text-gray-600">Blog</a></li>
+      <li><a href="#" class="hover:text-gray-600">Contact Us</a></li>
+    </ul>
+  </nav>
+
 
         <!-- Right Side Icons + Login -->
         <div class="hidden md:flex items-center px-2 gap-4">
